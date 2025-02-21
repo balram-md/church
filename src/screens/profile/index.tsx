@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 import { Card, IconButton } from 'react-native-paper';
 import { useAppSelector } from '../../redux/hooks/hooks';
+import moment from 'moment';
 
 const UserProfile = ({ navigation }) => {
   const user = useAppSelector((state) => state.user);
@@ -56,13 +57,13 @@ const UserProfile = ({ navigation }) => {
             {user.birthDate && (
               <View style={styles.infoRow}>
                 <Text style={styles.infoLabel}>Date of Birth:</Text>
-                <Text style={styles.infoValue}>{formatDate(user.birthDate)}</Text>
+                <Text style={styles.infoValue}>{moment(user.birthDate, 'YYYY-MM-DD').format('DD MMM YYYY')}</Text>
               </View>
             )}
             {user.joiningDate && (
               <View style={styles.infoRow}>
                 <Text style={styles.infoLabel}>Joining Date:</Text>
-                <Text style={styles.infoValue}>{formatDate(user.joiningDate)}</Text>
+                <Text style={styles.infoValue}>{moment(user.joiningDate, 'YYYY-MM-DD').format('DD MMM YYYY')}</Text>
               </View>
             )}
             {user.churchName && (
@@ -139,6 +140,7 @@ const styles = StyleSheet.create({
   infoValue: {
     color: '#555',
     fontSize: 16,
+    width:'70%'
   },
 });
 

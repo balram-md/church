@@ -24,9 +24,10 @@ function HomeScreen() {
 const Stack = createNativeStackNavigator();
 
 function RootNavigator() {
+    console.log('RootNavigator');
     return (
         <NavigationContainer>
-            <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName='LoginScreen'>
                 <Stack.Screen name="Splash" component={ChurchSplashScreen} />
                 <Stack.Screen name='Login' component={LoginScreen}/>
                 <Stack.Screen name='Register' component={RegistrationForm}/>
