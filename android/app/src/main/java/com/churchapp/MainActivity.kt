@@ -1,4 +1,4 @@
-package com.churchapp
+package com.probus.churchapp
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
