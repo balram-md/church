@@ -1,4 +1,4 @@
-package com.probus.churchapp
+package com.probus.church
 
 import android.app.Application
 import com.facebook.react.PackageList

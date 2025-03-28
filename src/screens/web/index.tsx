@@ -80,9 +80,39 @@ console.log('webViewUrl',webViewUrl)
     <View style={{flex: 1}}>
       <Header />
       <WebView
-        ref={webViewRef}
-        source={{uri: webViewUrl}}
-        onNavigationStateChange={handleNavigationStateChange}
+      ref={webViewRef}
+      source={{uri: webViewUrl}}
+      onNavigationStateChange={handleNavigationStateChange}
+      onError={(syntheticEvent) => {
+        const { nativeEvent } = syntheticEvent;
+        console.log('WebView error: ', JSON.stringify(nativeEvent));
+        if (nativeEvent.description === 'net::ERR_CONNECTION_RESET') {
+          Alert.alert(
+            'Connection Reset',
+            'The connection was reset. please retry or check your internet connection.',
+            [
+              { text: 'Retry', onPress: () => webViewRef.current?.reload() },
+            ],
+            { cancelable: false }
+          );
+        } else {
+          Alert.alert('Error', 'Failed to load page. Please check your internet connection or try again later.');
+        }
+      }}
+      onHttpError={(syntheticEvent) => {
+        const { nativeEvent } = syntheticEvent;
+        console.log('HTTP error: ', JSON.stringify(nativeEvent));
+      }}
+
+
+
+
+
+
+
+
+
+
       />
     </View>
   );

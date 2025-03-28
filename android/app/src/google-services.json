@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "577571207059",
+    "project_id": "church-f9095",
+    "storage_bucket": "church-f9095.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577571207059:android:9b24a3519cfe220d3d1a66",
+        "android_client_info": {
+          "package_name": "com.probus.church"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577571207059-48qb68rfd5ljm4f7isg4hht1esmmlm5c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.probus.church",
+            "certificate_hash": "c7868925142ba33847b6965d54b11c5d62f8c909"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIFEQjk6m37_2h2rKRfm7o0eMNi5Fjivc"
+        },
+        {
+          "current_key": "AIzaSyChU39b62hIV03re4DFjN1abx0shQJ_H28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577571207059:android:afaffc5bd6aeab213d1a66",
+        "android_client_info": {
+          "package_name": "com.churchapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIFEQjk6m37_2h2rKRfm7o0eMNi5Fjivc"
+        },
+        {
+          "current_key": "AIzaSyChU39b62hIV03re4DFjN1abx0shQJ_H28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577571207059:android:9dbf93bd00d743f73d1a66",
+        "android_client_info": {
+          "package_name": "com.probus.church"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIFEQjk6m37_2h2rKRfm7o0eMNi5Fjivc"
+        },
+        {
+          "current_key": "AIzaSyChU39b62hIV03re4DFjN1abx0shQJ_H28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

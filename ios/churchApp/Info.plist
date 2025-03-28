@@ -25,10 +25,29 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
+    <dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+    <key>NSExceptionDomains</key>
+    <dict>
+        <key>97.74.95.178</key> <!-- IP address without port -->
+        <dict>
+            <key>NSIncludesSubdomains</key>
+            <false/>
+            <key>NSExceptionAllowsInsecureHTTPLoads</key>
+            <true/> <!-- Allow insecure HTTP loads for this domain -->
+            <key>NSExceptionRequiresForwardSecrecy</key>
+            <false/> <!-- Whether forward secrecy is required -->
+            <key>NSExceptionMinimumTLSVersion</key>
+            <string>TLSv1.2</string> <!-- Minimum TLS version required -->
+            <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+            <true/> <!-- Allow insecure HTTP loads on specific port -->
+            <key>NSTemporaryExceptionMinimumTLSVersion</key>
+            <string>TLSv1.2</string> <!-- Minimum TLS version for specific port -->
+        </dict>
+    </dict>
+    </dict>
 	<dict>
-	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
-		<key>NSAllowsArbitraryLoads</key>
-		<false/>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
